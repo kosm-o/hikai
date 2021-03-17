@@ -1,0 +1,13 @@
+include /molecules/navigation/index
+
+mixin header
+  header.p-4.navbar(class=`o-header ${attributes.class}`)
+    .navbar-brand.mr-4
+      a(href="/")
+        h2#home-link(style="color:#111b27;") hikai
+      a.navbar-burger(role="button", data-target="main-nav")
+        span(aria-hidden="true")
+        span(aria-hidden="true")
+        span(aria-hidden="true")
+    +navigation
+      block navigation
